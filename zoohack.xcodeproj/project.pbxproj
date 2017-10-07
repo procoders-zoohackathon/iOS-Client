@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		839C31E788F0867A4D00C672 /* Pods_zoohack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC0DF406BDFB8662E1A6A3C /* Pods_zoohack.framework */; };
+		A24FC7ED1F8884E600FAC95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC7EC1F8884E600FAC95C /* AppDelegate.swift */; };
+		A24FC7EF1F8884E600FAC95C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC7EE1F8884E600FAC95C /* ViewController.swift */; };
+		A24FC7F21F8884E600FAC95C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24FC7F01F8884E600FAC95C /* Main.storyboard */; };
+		A24FC7F51F8884E600FAC95C /* zoohack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A24FC7F31F8884E600FAC95C /* zoohack.xcdatamodeld */; };
+		A24FC7F71F8884E600FAC95C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24FC7F61F8884E600FAC95C /* Assets.xcassets */; };
+		A24FC7FA1F8884E600FAC95C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24FC7F81F8884E600FAC95C /* LaunchScreen.storyboard */; };
+		A24FC8061F888BD100FAC95C /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC8051F888BD100FAC95C /* AlertModel.swift */; };
+		A24FC8091F888CB300FAC95C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC8081F888CB300FAC95C /* DataService.swift */; };
+		A2DE41441F88953400A75330 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE41431F88953400A75330 /* AlertTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2832502331100A3448E4054B /* Pods-zoohack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoohack.release.xcconfig"; path = "Pods/Target Support Files/Pods-zoohack/Pods-zoohack.release.xcconfig"; sourceTree = "<group>"; };
+		51885AE5EFD9465B66CEEDD2 /* Pods-zoohack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoohack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zoohack/Pods-zoohack.debug.xcconfig"; sourceTree = "<group>"; };
+		A24FC7E91F8884E600FAC95C /* zoohack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoohack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24FC7EC1F8884E600FAC95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A24FC7EE1F8884E600FAC95C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A24FC7F11F8884E600FAC95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A24FC7F41F8884E600FAC95C /* zoohack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = zoohack.xcdatamodel; sourceTree = "<group>"; };
+		A24FC7F61F8884E600FAC95C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A24FC7F91F8884E600FAC95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A24FC7FB1F8884E600FAC95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A24FC8051F888BD100FAC95C /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		A24FC8081F888CB300FAC95C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A2DE41431F88953400A75330 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		FAC0DF406BDFB8662E1A6A3C /* Pods_zoohack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zoohack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A24FC7E61F8884E600FAC95C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839C31E788F0867A4D00C672 /* Pods_zoohack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		221EAA0F5EFCD2071E844694 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0DF406BDFB8662E1A6A3C /* Pods_zoohack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A24FC7E01F8884E600FAC95C = {
+			isa = PBXGroup;
+			children = (
+				A24FC7EB1F8884E600FAC95C /* zoohack */,
+				A24FC7EA1F8884E600FAC95C /* Products */,
+				AE780C6CE051EA8661A079A3 /* Pods */,
+				221EAA0F5EFCD2071E844694 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A24FC7EA1F8884E600FAC95C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A24FC7E91F8884E600FAC95C /* zoohack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A24FC7EB1F8884E600FAC95C /* zoohack */ = {
+			isa = PBXGroup;
+			children = (
+				A2DE41421F88950900A75330 /* New Group */,
+				A24FC8071F888C9500FAC95C /* Services */,
+				A24FC8041F88851100FAC95C /* Controllers */,
+				A24FC8031F88850700FAC95C /* Models */,
+				A24FC8021F8884FB00FAC95C /* Views */,
+				A24FC7EC1F8884E600FAC95C /* AppDelegate.swift */,
+				A24FC7F01F8884E600FAC95C /* Main.storyboard */,
+				A24FC7F61F8884E600FAC95C /* Assets.xcassets */,
+				A24FC7F81F8884E600FAC95C /* LaunchScreen.storyboard */,
+				A24FC7FB1F8884E600FAC95C /* Info.plist */,
+				A24FC7F31F8884E600FAC95C /* zoohack.xcdatamodeld */,
+			);
+			path = zoohack;
+			sourceTree = "<group>";
+		};
+		A24FC8021F8884FB00FAC95C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2DE41431F88953400A75330 /* AlertTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A24FC8031F88850700FAC95C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A24FC8051F888BD100FAC95C /* AlertModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A24FC8041F88851100FAC95C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A24FC7EE1F8884E600FAC95C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A24FC8071F888C9500FAC95C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A24FC8081F888CB300FAC95C /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A2DE41421F88950900A75330 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AE780C6CE051EA8661A079A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51885AE5EFD9465B66CEEDD2 /* Pods-zoohack.debug.xcconfig */,
+				2832502331100A3448E4054B /* Pods-zoohack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A24FC7E81F8884E600FAC95C /* zoohack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A24FC7FE1F8884E600FAC95C /* Build configuration list for PBXNativeTarget "zoohack" */;
+			buildPhases = (
+				6ED788FD9EC9336F4916B4BB /* [CP] Check Pods Manifest.lock */,
+				A24FC7E51F8884E600FAC95C /* Sources */,
+				A24FC7E61F8884E600FAC95C /* Frameworks */,
+				A24FC7E71F8884E600FAC95C /* Resources */,
+				79C8FF084FBD1C8DA45F3D05 /* [CP] Embed Pods Frameworks */,
+				2DB08195C1007E12290AA652 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zoohack;
+			productName = zoohack;
+			productReference = A24FC7E91F8884E600FAC95C /* zoohack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A24FC7E11F8884E600FAC95C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Aditya Verma";
+				TargetAttributes = {
+					A24FC7E81F8884E600FAC95C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A24FC7E41F8884E600FAC95C /* Build configuration list for PBXProject "zoohack" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A24FC7E01F8884E600FAC95C;
+			productRefGroup = A24FC7EA1F8884E600FAC95C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A24FC7E81F8884E600FAC95C /* zoohack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A24FC7E71F8884E600FAC95C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A24FC7FA1F8884E600FAC95C /* LaunchScreen.storyboard in Resources */,
+				A24FC7F71F8884E600FAC95C /* Assets.xcassets in Resources */,
+				A24FC7F21F8884E600FAC95C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DB08195C1007E12290AA652 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zoohack/Pods-zoohack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ED788FD9EC9336F4916B4BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zoohack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79C8FF084FBD1C8DA45F3D05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-zoohack/Pods-zoohack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zoohack/Pods-zoohack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A24FC7E51F8884E600FAC95C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2DE41441F88953400A75330 /* AlertTableViewCell.swift in Sources */,
+				A24FC8061F888BD100FAC95C /* AlertModel.swift in Sources */,
+				A24FC7EF1F8884E600FAC95C /* ViewController.swift in Sources */,
+				A24FC7F51F8884E600FAC95C /* zoohack.xcdatamodeld in Sources */,
+				A24FC7ED1F8884E600FAC95C /* AppDelegate.swift in Sources */,
+				A24FC8091F888CB300FAC95C /* DataService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A24FC7F01F8884E600FAC95C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A24FC7F11F8884E600FAC95C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A24FC7F81F8884E600FAC95C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A24FC7F91F8884E600FAC95C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A24FC7FC1F8884E600FAC95C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A24FC7FD1F8884E600FAC95C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A24FC7FF1F8884E600FAC95C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51885AE5EFD9465B66CEEDD2 /* Pods-zoohack.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HLN7VWUFR;
+				INFOPLIST_FILE = zoohack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.av.zoohack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A24FC8001F8884E600FAC95C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2832502331100A3448E4054B /* Pods-zoohack.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HLN7VWUFR;
+				INFOPLIST_FILE = zoohack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.av.zoohack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A24FC7E41F8884E600FAC95C /* Build configuration list for PBXProject "zoohack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A24FC7FC1F8884E600FAC95C /* Debug */,
+				A24FC7FD1F8884E600FAC95C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A24FC7FE1F8884E600FAC95C /* Build configuration list for PBXNativeTarget "zoohack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A24FC7FF1F8884E600FAC95C /* Debug */,
+				A24FC8001F8884E600FAC95C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A24FC7F31F8884E600FAC95C /* zoohack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A24FC7F41F8884E600FAC95C /* zoohack.xcdatamodel */,
+			);
+			currentVersion = A24FC7F41F8884E600FAC95C /* zoohack.xcdatamodel */;
+			path = zoohack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A24FC7E11F8884E600FAC95C /* Project object */;
+}
