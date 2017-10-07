@@ -9,11 +9,16 @@
 import Foundation
 
 class DataService {
+  
+    
     static let instance = DataService()
     
-    private let alert = [AlertModel(message: "Please respond guys"),
-                         AlertModel(message: "What is happening?")
-    ]
+  
+    
+    
+    
+    
+    public var alert = [AlertModel]()
     
     func getData() -> [AlertModel]{
         return alert

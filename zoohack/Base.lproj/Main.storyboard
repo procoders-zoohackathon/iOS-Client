@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Maps View Controller-->
         <scene sceneID="gix-xi-HNY">
             <objects>
-                <viewController id="XL8-Fm-e9Q" sceneMemberID="viewController">
+                <viewController id="XL8-Fm-e9Q" customClass="MapsViewController" customModule="zoohack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HC8-Qe-nZy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,18 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M12-fB-Fxc">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem id="YOT-aa-mbS"/>
+                                    <navigationItem id="YOT-aa-mbS">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="vtP-cB-lGh">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y8r-9d-gfK">
+                                                <rect key="frame" x="320" y="7" width="39" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Close"/>
+                                            </button>
+                                            <connections>
+                                                <action selector="closeButtonPressed:" destination="XL8-Fm-e9Q" id="kZr-PO-9E9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -145,6 +156,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pLh-3M-eGo"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="X2C-3f-Rzf" id="l8S-g7-OcP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgy-gq-Uih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

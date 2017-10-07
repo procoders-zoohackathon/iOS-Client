@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		839C31E788F0867A4D00C672 /* Pods_zoohack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC0DF406BDFB8662E1A6A3C /* Pods_zoohack.framework */; };
+		A21C77FF1F88D64F00C5C491 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C77FE1F88D64F00C5C491 /* MapsViewController.swift */; };
 		A24FC7ED1F8884E600FAC95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC7EC1F8884E600FAC95C /* AppDelegate.swift */; };
 		A24FC7EF1F8884E600FAC95C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC7EE1F8884E600FAC95C /* ViewController.swift */; };
 		A24FC7F21F8884E600FAC95C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24FC7F01F8884E600FAC95C /* Main.storyboard */; };
@@ -16,12 +17,14 @@
 		A24FC7FA1F8884E600FAC95C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24FC7F81F8884E600FAC95C /* LaunchScreen.storyboard */; };
 		A24FC8061F888BD100FAC95C /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC8051F888BD100FAC95C /* AlertModel.swift */; };
 		A24FC8091F888CB300FAC95C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC8081F888CB300FAC95C /* DataService.swift */; };
+		A2A7FB851F88B507001454EA /* StarConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A7FB841F88B507001454EA /* StarConnect.swift */; };
 		A2DE41441F88953400A75330 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE41431F88953400A75330 /* AlertTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2832502331100A3448E4054B /* Pods-zoohack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoohack.release.xcconfig"; path = "Pods/Target Support Files/Pods-zoohack/Pods-zoohack.release.xcconfig"; sourceTree = "<group>"; };
 		51885AE5EFD9465B66CEEDD2 /* Pods-zoohack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoohack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zoohack/Pods-zoohack.debug.xcconfig"; sourceTree = "<group>"; };
+		A21C77FE1F88D64F00C5C491 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A24FC7E91F8884E600FAC95C /* zoohack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoohack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24FC7EC1F8884E600FAC95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A24FC7EE1F8884E600FAC95C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		A24FC7FB1F8884E600FAC95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A24FC8051F888BD100FAC95C /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 		A24FC8081F888CB300FAC95C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A2A7FB841F88B507001454EA /* StarConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarConnect.swift; sourceTree = "<group>"; };
 		A2DE41431F88953400A75330 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
 		FAC0DF406BDFB8662E1A6A3C /* Pods_zoohack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zoohack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A24FC7EE1F8884E600FAC95C /* ViewController.swift */,
+				A21C77FE1F88D64F00C5C491 /* MapsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A24FC8081F888CB300FAC95C /* DataService.swift */,
+				A2A7FB841F88B507001454EA /* StarConnect.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -251,13 +257,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-zoohack/Pods-zoohack-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -271,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A7FB851F88B507001454EA /* StarConnect.swift in Sources */,
 				A2DE41441F88953400A75330 /* AlertTableViewCell.swift in Sources */,
 				A24FC8061F888BD100FAC95C /* AlertModel.swift in Sources */,
+				A21C77FF1F88D64F00C5C491 /* MapsViewController.swift in Sources */,
 				A24FC7EF1F8884E600FAC95C /* ViewController.swift in Sources */,
 				A24FC7F51F8884E600FAC95C /* zoohack.xcdatamodeld in Sources */,
 				A24FC7ED1F8884E600FAC95C /* AppDelegate.swift in Sources */,
