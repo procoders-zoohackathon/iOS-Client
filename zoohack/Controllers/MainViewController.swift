@@ -15,12 +15,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var latitude: Double!
     var longitude: Double!
     var number: String!
+    var name: String!
     
     func initLogin(number: String) {
         self.number = number
     }
-    
+   
     var socket = WebSocket(url: URL(string: "ws://localhost:8080/connect")!)
+    
     let speechSynth = AVSpeechSynthesizer()
     
     func websocketDidConnect(socket: WebSocketClient) {
@@ -37,23 +39,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let dataFromString = text.data(using: String.Encoding.utf8, allowLossyConversion: false) {
             let json = JSON(data: dataFromString)
             if let alert = json["data"]["data"]["type"].string {
-                DataService.instance.alert.append(AlertModel(message: alert))
+                let date = dateFormating(date: json["data"]["data"]["time"].string!)
+                DataService.instance.alert.append(AlertModel(message: json["data"]["data"]["message"].string!, latitude: json["data"]["data"]["location"]["latitude"].double!, longitude: json["data"]["data"]["location"]["longitude"].double!, time: date, mainTitle: alert))
                 let speechUtter = AVSpeechUtterance(string: alert)
+                let alertUtter = AVSpeechUtterance(string: json["data"]["data"]["message"].string!)
                 speechSynth.speak(speechUtter)
-                
+                speechSynth.speak(alertUtter)
                 tableView.beginUpdates()
                 let arr = [IndexPath(row: DataService.instance.alert.count - 1, section: 0)]
                 tableView.insertRows(at: arr as? [IndexPath] ?? [IndexPath](), with: .automatic)
                 tableView.endUpdates()
             }
-            print(json["data"]["data"]["location"])
-            if let latitude = json["data"]["data"]["location"]["latitute"].double {
-                self.latitude = latitude
-                
-            }
-            if let longitude = json["data"]["data"]["location"]["longitude"].double {
-                self.longitude = longitude
-            }
+            print(json["data"]["data"])
+           
         }
     }
     
@@ -89,13 +87,24 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let alert = DataService.instance.getData()[indexPath.row]
+        self.latitude = alert.latitude
+        self.longitude = alert.longitude
+        self.name = alert.message
         performSegue(withIdentifier: "toMaps", sender: alert)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let maps = segue.destination as? MapsViewController {
-            maps.initCoordinate(latitude: self.latitude, longitude: self.longitude)
+            maps.initCoordinate(latitude: self.latitude, longitude: self.longitude, locationName: self.name)
         }
+    }
+    func dateFormating(date: String) -> String {
+        let format = ISO8601DateFormatter()
+        let timeISO = format.date(from: date)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm"
+        let time = formatter.string(from: timeISO!)
+        return String(describing: time)
     }
     
 }

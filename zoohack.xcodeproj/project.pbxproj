@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		839C31E788F0867A4D00C672 /* Pods_zoohack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC0DF406BDFB8662E1A6A3C /* Pods_zoohack.framework */; };
 		A20E2E9F1F89EBF400C1CCE4 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20E2E9E1F89EBF400C1CCE4 /* PhoneViewController.swift */; };
+		A20E2EA11F8A102600C1CCE4 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20E2EA01F8A102600C1CCE4 /* Artwork.swift */; };
+		A20E2EA31F8A17A900C1CCE4 /* ShadowNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20E2EA21F8A17A900C1CCE4 /* ShadowNavigationBar.swift */; };
 		A21C77FF1F88D64F00C5C491 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C77FE1F88D64F00C5C491 /* MapsViewController.swift */; };
 		A24FC7ED1F8884E600FAC95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC7EC1F8884E600FAC95C /* AppDelegate.swift */; };
 		A24FC7EF1F8884E600FAC95C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24FC7EE1F8884E600FAC95C /* MainViewController.swift */; };
@@ -27,6 +29,8 @@
 		2832502331100A3448E4054B /* Pods-zoohack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoohack.release.xcconfig"; path = "Pods/Target Support Files/Pods-zoohack/Pods-zoohack.release.xcconfig"; sourceTree = "<group>"; };
 		51885AE5EFD9465B66CEEDD2 /* Pods-zoohack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zoohack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zoohack/Pods-zoohack.debug.xcconfig"; sourceTree = "<group>"; };
 		A20E2E9E1F89EBF400C1CCE4 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		A20E2EA01F8A102600C1CCE4 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		A20E2EA21F8A17A900C1CCE4 /* ShadowNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowNavigationBar.swift; sourceTree = "<group>"; };
 		A21C77FE1F88D64F00C5C491 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A24FC7E91F8884E600FAC95C /* zoohack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zoohack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24FC7EC1F8884E600FAC95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				A2DE41431F88953400A75330 /* AlertTableViewCell.swift */,
+				A20E2EA21F8A17A900C1CCE4 /* ShadowNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				A24FC8051F888BD100FAC95C /* AlertModel.swift */,
+				A20E2EA01F8A102600C1CCE4 /* Artwork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20E2EA11F8A102600C1CCE4 /* Artwork.swift in Sources */,
 				A20E2E9F1F89EBF400C1CCE4 /* PhoneViewController.swift in Sources */,
 				A2A7FB851F88B507001454EA /* StarConnect.swift in Sources */,
 				A2DE41441F88953400A75330 /* AlertTableViewCell.swift in Sources */,
+				A20E2EA31F8A17A900C1CCE4 /* ShadowNavigationBar.swift in Sources */,
 				A24FC8061F888BD100FAC95C /* AlertModel.swift in Sources */,
 				A21C77FF1F88D64F00C5C491 /* MapsViewController.swift in Sources */,
 				A24FC7EF1F8884E600FAC95C /* MainViewController.swift in Sources */,

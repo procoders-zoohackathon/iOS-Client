@@ -8,3 +8,8 @@
 
 import Foundation
 
+//class StarConnect {
+//    public static var instance = StarConnect()
+//    public var isLoggedIn: Boolean = false
+//}
+

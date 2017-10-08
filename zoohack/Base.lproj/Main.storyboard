@@ -31,23 +31,25 @@
                                     <action selector="getStartedButtonPressed:" destination="vzq-Ux-U5S" eventType="touchUpInside" id="vWR-UB-OjG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alertify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZA-aB-fLP">
-                                <rect key="frame" x="145.5" y="193" width="83.5" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertArtboard 1" translatesAutoresizingMaskIntoConstraints="NO" id="JkN-J5-H8W">
+                                <rect key="frame" x="112" y="86" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="3Tz-A3-gre"/>
+                                    <constraint firstAttribute="height" constant="150" id="zi8-aT-K49"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MAP-oI-B4d" firstAttribute="top" secondItem="JkN-J5-H8W" secondAttribute="bottom" constant="36" id="6YT-Sb-awo"/>
                             <constraint firstItem="Ylm-yc-3eS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5nx-Uc-UqZ" secondAttribute="trailing" id="8Nc-MG-flb"/>
                             <constraint firstItem="5nx-Uc-UqZ" firstAttribute="centerY" secondItem="FVr-yn-Rag" secondAttribute="centerY" id="ApS-IE-Vzr"/>
                             <constraint firstItem="MAP-oI-B4d" firstAttribute="leading" secondItem="Ylm-yc-3eS" secondAttribute="leading" constant="16" id="C08-TT-n9w"/>
                             <constraint firstItem="5nx-Uc-UqZ" firstAttribute="top" secondItem="MAP-oI-B4d" secondAttribute="bottom" constant="16" id="Eib-Lb-37y"/>
                             <constraint firstItem="Ylm-yc-3eS" firstAttribute="trailing" secondItem="MAP-oI-B4d" secondAttribute="trailing" constant="16" id="LRf-7f-AMn"/>
-                            <constraint firstItem="2ZA-aB-fLP" firstAttribute="centerX" secondItem="FVr-yn-Rag" secondAttribute="centerX" id="bpX-y3-jT4"/>
+                            <constraint firstItem="Ylm-yc-3eS" firstAttribute="trailing" secondItem="JkN-J5-H8W" secondAttribute="trailing" constant="113" id="Y9g-Sj-6cY"/>
                             <constraint firstItem="5nx-Uc-UqZ" firstAttribute="top" secondItem="MAP-oI-B4d" secondAttribute="bottom" constant="16" id="gri-jc-V9T"/>
-                            <constraint firstItem="MAP-oI-B4d" firstAttribute="top" secondItem="2ZA-aB-fLP" secondAttribute="bottom" constant="50" id="pBk-2z-S5g"/>
+                            <constraint firstItem="JkN-J5-H8W" firstAttribute="leading" secondItem="Ylm-yc-3eS" secondAttribute="leading" constant="112" id="o86-XR-aJL"/>
                             <constraint firstItem="5nx-Uc-UqZ" firstAttribute="centerX" secondItem="FVr-yn-Rag" secondAttribute="centerX" id="sLf-dd-fhU"/>
                             <constraint firstItem="5nx-Uc-UqZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ylm-yc-3eS" secondAttribute="leading" id="tlJ-rF-mTJ"/>
                         </constraints>
@@ -70,7 +72,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHc-bJ-cEq">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHc-bJ-cEq" customClass="ShadowNavigationBar" customModule="zoohack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                                 <items>
                                     <navigationItem title="Alertify" id="SL6-Qr-BfX"/>
@@ -95,11 +97,11 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Threat Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdF-7s-t1X">
                                                     <rect key="frame" x="10" y="10" width="359" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-cX-63c">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-cX-63c">
                                                     <rect key="frame" x="10" y="39" width="359" height="64"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -122,6 +124,7 @@
                                         <connections>
                                             <outlet property="messageView" destination="JxY-cX-63c" id="ryf-2y-Ars"/>
                                             <outlet property="timeView" destination="3Vm-Fi-D7A" id="AKf-bn-ayE"/>
+                                            <outlet property="titleView" destination="CdF-7s-t1X" id="miX-fG-lcp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -170,20 +173,24 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OG-h4-xMs">
                                 <rect key="frame" x="149" y="627" width="77" height="30"/>
                                 <state key="normal" title="Directions"/>
+                                <connections>
+                                    <action selector="directionButtonWasPressed:" destination="XL8-Fm-e9Q" eventType="touchUpInside" id="s6c-Ve-fBG"/>
+                                </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M12-fB-Fxc">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M12-fB-Fxc" customClass="ShadowNavigationBar" customModule="zoohack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem id="YOT-aa-mbS">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="vtP-cB-lGh">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y8r-9d-gfK">
-                                                <rect key="frame" x="320" y="7" width="39" height="30"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="VmK-Sa-r9U">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XF7-NE-QhZ">
+                                                <rect key="frame" x="313" y="7" width="46" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Close"/>
+                                                <connections>
+                                                    <action selector="closeButtonWasPressed:" destination="XL8-Fm-e9Q" eventType="touchUpInside" id="qFc-98-2Y0"/>
+                                                </connections>
                                             </button>
-                                            <connections>
-                                                <action selector="closeButtonPressed:" destination="XL8-Fm-e9Q" id="kZr-PO-9E9"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -217,4 +224,7 @@
             <point key="canvasLocation" x="1104.8" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alertArtboard 1" width="1000" height="1000"/>
+    </resources>
 </document>

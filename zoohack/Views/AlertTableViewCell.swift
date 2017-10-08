@@ -11,11 +11,14 @@ import UIKit
 class AlertTableViewCell: UITableViewCell {
    
     @IBOutlet weak var messageView: UILabel!
-    
+    @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var timeView: UILabel!
+    
     
     func updateViews(alert: AlertModel) {
         self.messageView.text = alert.message
+        self.timeView.text = alert.time
+        self.titleView.text = alert.mainTitle
     }
 
 }
