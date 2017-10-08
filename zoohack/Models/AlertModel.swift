@@ -7,12 +7,18 @@
 //
 
 import Foundation
-
+import CoreData
 struct AlertModel {
     
     private(set) public var message: String!
+    private(set) public var latitude: Double!
+    private(set) public var longitude: Double!
     
-    init(message: String) {
+    
+    
+    init(message: String, latitude: Double, longitude: Double) {
         self.message = message
+        self.latitude = latitude
+        self.longitude = longitude
     }
 }

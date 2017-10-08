@@ -12,6 +12,13 @@ import SwiftyJSON
 import AVFoundation
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WebSocketDelegate {
+    var latitude: Double!
+    var longitude: Double!
+    var number: String!
+    
+    func initLogin(number: String) {
+        self.number = number
+    }
     
     var socket = WebSocket(url: URL(string: "ws://localhost:8080/connect")!)
     let speechSynth = AVSpeechSynthesizer()
@@ -26,18 +33,26 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
 //        print("Message: \(text)")
+        print(self.number)
         if let dataFromString = text.data(using: String.Encoding.utf8, allowLossyConversion: false) {
             let json = JSON(data: dataFromString)
-            if let alert = json["data"]["data"].string {
+            if let alert = json["data"]["data"]["type"].string {
                 DataService.instance.alert.append(AlertModel(message: alert))
                 let speechUtter = AVSpeechUtterance(string: alert)
-                
                 speechSynth.speak(speechUtter)
                 
                 tableView.beginUpdates()
                 let arr = [IndexPath(row: DataService.instance.alert.count - 1, section: 0)]
                 tableView.insertRows(at: arr as? [IndexPath] ?? [IndexPath](), with: .automatic)
                 tableView.endUpdates()
+            }
+            print(json["data"]["data"]["location"])
+            if let latitude = json["data"]["data"]["location"]["latitute"].double {
+                self.latitude = latitude
+                
+            }
+            if let longitude = json["data"]["data"]["location"]["longitude"].double {
+                self.longitude = longitude
             }
         }
     }
@@ -79,7 +94,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let maps = segue.destination as? MapsViewController {
-            maps.initCoordinate(latitude: 28.6132785, longitude: 77.2922331)
+            maps.initCoordinate(latitude: self.latitude, longitude: self.longitude)
         }
     }
     

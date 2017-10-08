@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vzq-Ux-U5S">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Phone View Controller-->
+        <scene sceneID="q8z-f2-H21">
+            <objects>
+                <viewController id="vzq-Ux-U5S" customClass="PhoneViewController" customModule="zoohack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FVr-yn-Rag">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAP-oI-B4d">
+                                <rect key="frame" x="16" y="272" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" keyboardAppearance="alert" returnKeyType="done" smartDashesType="yes" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nx-Uc-UqZ">
+                                <rect key="frame" x="147" y="318" width="80" height="30"/>
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <action selector="getStartedButtonPressed:" destination="vzq-Ux-U5S" eventType="touchUpInside" id="vWR-UB-OjG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alertify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZA-aB-fLP">
+                                <rect key="frame" x="145.5" y="193" width="83.5" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ylm-yc-3eS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5nx-Uc-UqZ" secondAttribute="trailing" id="8Nc-MG-flb"/>
+                            <constraint firstItem="5nx-Uc-UqZ" firstAttribute="centerY" secondItem="FVr-yn-Rag" secondAttribute="centerY" id="ApS-IE-Vzr"/>
+                            <constraint firstItem="MAP-oI-B4d" firstAttribute="leading" secondItem="Ylm-yc-3eS" secondAttribute="leading" constant="16" id="C08-TT-n9w"/>
+                            <constraint firstItem="5nx-Uc-UqZ" firstAttribute="top" secondItem="MAP-oI-B4d" secondAttribute="bottom" constant="16" id="Eib-Lb-37y"/>
+                            <constraint firstItem="Ylm-yc-3eS" firstAttribute="trailing" secondItem="MAP-oI-B4d" secondAttribute="trailing" constant="16" id="LRf-7f-AMn"/>
+                            <constraint firstItem="2ZA-aB-fLP" firstAttribute="centerX" secondItem="FVr-yn-Rag" secondAttribute="centerX" id="bpX-y3-jT4"/>
+                            <constraint firstItem="5nx-Uc-UqZ" firstAttribute="top" secondItem="MAP-oI-B4d" secondAttribute="bottom" constant="16" id="gri-jc-V9T"/>
+                            <constraint firstItem="MAP-oI-B4d" firstAttribute="top" secondItem="2ZA-aB-fLP" secondAttribute="bottom" constant="50" id="pBk-2z-S5g"/>
+                            <constraint firstItem="5nx-Uc-UqZ" firstAttribute="centerX" secondItem="FVr-yn-Rag" secondAttribute="centerX" id="sLf-dd-fhU"/>
+                            <constraint firstItem="5nx-Uc-UqZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ylm-yc-3eS" secondAttribute="leading" id="tlJ-rF-mTJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ylm-yc-3eS"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNumberLabel" destination="MAP-oI-B4d" id="TqJ-3I-HGG"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toAlertPanel" id="5g6-no-hce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKa-wQ-XWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="133.5832083958021"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHc-bJ-cEq">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHc-bJ-cEq">
                                 <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                                 <items>
                                     <navigationItem title="Alertify" id="SL6-Qr-BfX"/>
